@@ -1,0 +1,19 @@
+
+services:
+  mongo:
+    container_name: mongodb
+    image: mongo:4
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  redis:
+    container_name: redis
+    image: redis
+    command: redis-server --requirepass sa
+    ports:
+      - "6379:6379"
+
+volumes:
+  mongo-data:
