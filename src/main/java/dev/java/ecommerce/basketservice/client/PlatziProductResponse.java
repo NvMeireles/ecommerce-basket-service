@@ -1,5 +1,6 @@
 package dev.java.ecommerce.basketservice.client;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 public record PlatziProductResponse(
@@ -8,5 +9,5 @@ public record PlatziProductResponse(
         BigDecimal price,
         String description,
         String category
-) {
+) implements Serializable {
 }
